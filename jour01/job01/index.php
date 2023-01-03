@@ -15,6 +15,11 @@
         $myBool = false;
         echo "$str2 $str $str3 \n";
         echo $val + 4, "\n";
+        /* ou 
+        if (is_int($val)) {
+        $val += 4;
+        }
+        */
         echo $myBool;
 
 
