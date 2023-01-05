@@ -4,19 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job02</title>
+    <title>Job05</title>
 </head>
 <body>
-<?php
-        for($i=0; $i<=1337; $i++)
-            {
-                echo $i."<br>";
-            }
-/*
-if ($i=26, $i=37, $i=88, $i=1111, $i=3233) {
-    $i++;
-}
-*/
-?>
+    
 </body>
 </html>
