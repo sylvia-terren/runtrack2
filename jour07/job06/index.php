@@ -7,6 +7,7 @@
     <title>Job 06</title>
 </head>
 <body>
-    
+<?php
+    ?>
 </body>
 </html>

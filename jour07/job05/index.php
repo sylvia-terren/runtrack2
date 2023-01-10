@@ -8,9 +8,18 @@
 </head>
 <body>
     
-<?php
-function occurences($str, $char) {
-    
-}
+    <?php
+        function occurences($str, $char) {
+            $compteur = 0;
+        for ($i = 0, isset($str[$i]), $i++) {
+                if ($str[$i] == $char) {
+                    $compteur++;
+                }
+        }
+        }
+        
+        return occurences("Wil s'inquiète pour lui.", "i");
+        ?>
+
 </body>
 </html>
