@@ -9,13 +9,10 @@
 </head>
 <body>
     <?php
-        for($i=0; $i<=1337; $i++)
-            {
-                echo $i."<br>";
+        for($i=0; $i<=1337; $i++) {
+                echo $i;
             }
-            #if($i=42) {
-#               echo $i='<b><u> 
-            #}
+ 
     ?>
 </body>
 </html>
