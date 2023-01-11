@@ -9,23 +9,28 @@
 <body>
 
     <?php
+        //start the session
         session_start();
 
+        //met le compteur à 1 s'il n'a jamais été lancé avant
         if (!isset($_SESSION['nbvisites'])) {
-            $_SESSION['nbvisites'] = 1; 
+            $_SESSION['nbvisites'] = 1;
         }
-        
+        //comptabilise les visites à chaque chargement de la page
         else {
             $_SESSION['nbvisites']++;
         }
-
+        //reset le compteur à 0 si on clique dessus
         if (isset($_POST['reset'])) {
-            $_SESSION['nbvisites'] = 0;
-        }
+            //$_SESSION['nbvisites'] = 0;
+            unset($_SESSION['nbvisites']);
+        } 
+        // elseif (isset($_SESSION['nbvisites']) == 0) {
+        //     $_SESSION['nbvisites']++;
+        // }
 
-        echo "Il y a eu ".$_SESSION['nbvisites']." visite(s).";
    ?>
-
+    <!-- boutton reset -->
     <form action="index.php" method="post">
         <input type="submit" name="reset" value="Reset" />
     </form>

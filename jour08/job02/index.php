@@ -8,15 +8,22 @@
 </head>
 <body>
     <?php
-        $nbvisites = 1;
 
-        if(isset($_COOKIE['count'])) {$
-            $nbvisites = $_COOKIE['count']; 
-            $nbvisites++;
+        if (!isset($_COOKIE['nbvisites'])) {
+            $_COOKIE['nbvisites'] = 1; 
+        }
+        //comptabilise les visites à chaque chargement de la page
+        else {
+            $_COOKIE['nbvisites']++;
         }
 
-        setcookie('count', $nbvisites);
-        echo "Le site comptabilise ".$nbvisites." visites(s).";
+        // if(isset($_COOKIE['count'])) {
+        //     $nbvisites = $_COOKIE['count']; 
+        //     $nbvisites++;
+        // }
+
+        //setcookie('count', $nbvisites);
+        echo "Le site comptabilise ".$_COOKIE['nbvisites']." visites(s).";
 
         #unset($_COOKIE['nbvisites']);
         #echo $_COOKIE['nbvisites'];
