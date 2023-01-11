@@ -9,20 +9,24 @@
 <body>
 
     <form action="index.php" method="get">
-        <input type="text" name="prenom" />
+        <!-- texte -->
+        <input type="text" name="text" />
+        <!-- bouton envoyer -->
         <input type="submit" name="send"/>
+        <!-- bouton reset -->
         <input type="reset" name="reset"/>
     </form>
 
     <?php
         session_start();
+        // session_destroy();
+        //var_dump($_SESSION);
 
-        if (isset($_GET['prenom'])) {
-            
-
-
+        if (isset($_GET['text'])) {
+            $_SESSION['list_prenom'][] = $_GET['text'];
         }
 
+        echo $_SESSION['list_prenom'];
     ?>
 </body>
 </html>
