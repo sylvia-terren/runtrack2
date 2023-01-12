@@ -1,3 +1,3 @@
 SELECT * 
 FROM `etudiants` 
-WHERE naissance < 20050101; 
+WHERE naissance > 20050101;
